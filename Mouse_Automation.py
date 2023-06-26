@@ -10,8 +10,6 @@ import sys
 running = True
 
 # Function to move the cursor randomly
-
-
 def move_cursor():
     x, y = screen.size()
     x1 = random.randint(0, x)
@@ -19,8 +17,6 @@ def move_cursor():
     screen.moveTo(x1, y1)
 
 # Function to start the cursor movement
-
-
 def start_movement():
     global running
     running = True
@@ -28,8 +24,9 @@ def start_movement():
     # Disable the start button once it's clicked
     start_button.config(state=tk.DISABLED)
 
-    # Enable the stop button
+    # Enable the stop and close buttons
     stop_button.config(state=tk.NORMAL)
+    close_button.config(state=tk.NORMAL)
 
     # Print the start message
     print("Program Executes...")
@@ -46,8 +43,6 @@ def start_movement():
     movement_thread.start()
 
 # Function to stop the cursor movement
-
-
 def stop_movement():
     global running
     running = False
@@ -61,6 +56,11 @@ def stop_movement():
     # Print the termination message
     print("The code has been terminated by the user...")
 
+# Function to close the application
+def close_application():
+    print("Application Closed")
+    window.destroy()
+    sys.exit()
 
 # Create the main Tkinter window
 window = tk.Tk()
@@ -79,26 +79,26 @@ container = tk.Frame(window, bg="black", width=700, height=500)
 container.pack(pady=50)
 
 # Create a label for the title
-title_label = tk.Label(container, text="Cursor Movement Automation", font=(
-    "Arial", 24), fg="white", bg="black")
+title_label = tk.Label(container, text="Cursor Movement Automation", font=("Arial", 24), fg="white", bg="black")
 title_label.pack(pady=20)
 
 # Create a start button
-start_button = tk.Button(container, text="Start", font=(
-    "Arial", 14), fg="white", bg="green", command=start_movement, width=10)
+start_button = tk.Button(container, text="Start", font=("Arial", 14), fg="white", bg="green", command=start_movement, width=10)
 start_button.pack(pady=10)
 
 # Create a stop button
-stop_button = tk.Button(container, text="Stop", font=(
-    "Arial", 14), fg="white", bg="red", command=stop_movement, state=tk.DISABLED, width=10)
+stop_button = tk.Button(container, text="Stop", font=("Arial", 14), fg="white", bg="red", command=stop_movement, state=tk.DISABLED, width=10)
 stop_button.pack(pady=10)
+
+# Create a close button
+close_button = tk.Button(container, text="Close", font=("Arial", 8), fg="white", bg="gray", command=close_application, width=10)
+close_button.pack(pady=10)
 
 # Center align the widgets
 container.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
 # label for the code editor
-creator_label = tk.Label(window, text="Shiwarne Silva\nTrainee HelpDesk Executive", font=(
-    "Arial", 10), fg="white", bg="black")
+creator_label = tk.Label(window, text="Shiwarne Silva\nTrainee HelpDesk Executive", font=("Arial", 10), fg="white", bg="black")
 creator_label.place(relx=1, rely=1, anchor=tk.SE, x=-10, y=-10)
 
 # Start the Tkinter event loop
