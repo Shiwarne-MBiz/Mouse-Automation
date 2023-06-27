@@ -1,3 +1,6 @@
+# Project by Shiwarne Silva
+# https://github.com/Shiwarne-MBiz
+
 import tkinter as tk
 import pyautogui as screen
 import random
@@ -70,7 +73,7 @@ if sys.platform.startswith('win'):
     ctypes.windll.shcore.SetProcessDpiAwareness(1)
     window.attributes('-toolwindow', True)
 
-window.title("Cursor Movement Automation")
+window.title("AFK Calculator")
 window.geometry("800x600")  # Set the window size
 window.configure(bg="black")  # Set the background color
 
@@ -79,7 +82,7 @@ container = tk.Frame(window, bg="black", width=700, height=500)
 container.pack(pady=50)
 
 # Create a label for the title
-title_label = tk.Label(container, text="Cursor Movement Automation", font=("Arial", 24), fg="white", bg="black")
+title_label = tk.Label(container, text="AFK Calculator", font=("Arial", 24), fg="white", bg="black")
 title_label.pack(pady=20)
 
 # Create a start button
@@ -96,10 +99,6 @@ close_button.pack(pady=10)
 
 # Center align the widgets
 container.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-
-# label for the code editor
-creator_label = tk.Label(window, text="Shiwarne Silva\nTrainee HelpDesk Executive", font=("Arial", 10), fg="white", bg="black")
-creator_label.place(relx=1, rely=1, anchor=tk.SE, x=-10, y=-10)
 
 # Start the Tkinter event loop
 window.mainloop()
