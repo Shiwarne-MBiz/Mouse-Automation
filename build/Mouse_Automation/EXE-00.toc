@@ -1,10 +1,10 @@
 ('C:\\Users\\Shiwarne Silva\\Desktop\\MBiz Software\\Mouse Automation '
  'Project\\Mouse-Automation\\dist\\Mouse_Automation.exe',
- True,
+ False,
  False,
  False,
  'C:\\Users\\Shiwarne Silva\\Desktop\\MBiz Software\\Mouse Automation '
- 'Project\\Mouse-Automation\\Mouse_Automation\\Lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-console.ico',
+ 'Project\\Mouse-Automation\\Mouse_Automation\\Lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-windowed.ico',
  None,
  False,
  False,
@@ -3868,8 +3868,8 @@
  [],
  False,
  False,
- 1687823116,
- [('run.exe',
+ 1687825572,
+ [('runw.exe',
    'C:\\Users\\Shiwarne Silva\\Desktop\\MBiz Software\\Mouse Automation '
-   'Project\\Mouse-Automation\\Mouse_Automation\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
+   'Project\\Mouse-Automation\\Mouse_Automation\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
    'EXECUTABLE')])
